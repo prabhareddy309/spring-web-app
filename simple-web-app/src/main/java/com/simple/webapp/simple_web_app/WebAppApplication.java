@@ -7,5 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class WebAppApplication {
 	public static void main(String args[]) {
 	SpringApplication.run(WebAppApplication.class, args);
+	// this is in sync with git
 	}
 }
