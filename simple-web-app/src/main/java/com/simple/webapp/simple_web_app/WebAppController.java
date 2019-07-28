@@ -7,6 +7,8 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
@@ -14,10 +16,14 @@ public class WebAppController {
 
 	@RequestMapping("/home")
 	//@ResponseBody
-	public String home(HttpServletRequest req, HttpServletResponse res) {
-		String name = req.getParameter("name");
-		HttpSession ses = req.getSession();
-		ses.setAttribute("name", name);
-		return "home.jsp";
+	public ModelAndView home(Student student) {
+		//String name = name1;
+		//HttpSession ses = req.getSession();
+		//ses.setAttribute("name", name);
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("obj", student);
+		mv.setViewName("home.jsp");
+		//return "home.jsp";
+		return mv;
 	}
 }

@@ -1,3 +1,3 @@
 <html>
-<p>Hello ${name}</p>
+<p>Hello ${obj.name}.  ${obj.lang}. ${obj.id}</p>
 </html>
